@@ -1,4 +1,4 @@
-package com.example.medicalcheck;
+package com.example.medicalcheck.activities;
 
 import android.Manifest;
 import android.content.Context;

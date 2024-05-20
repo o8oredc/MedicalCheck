@@ -1,4 +1,4 @@
-package com.example.medicalcheck;
+package com.example.medicalcheck.data;
 
 public class UserProfile {
 

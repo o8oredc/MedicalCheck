@@ -1,4 +1,4 @@
-package com.example.medicalcheck;
+package com.example.medicalcheck.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +11,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medicalcheck.ProfileFragment;
+import com.example.medicalcheck.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;

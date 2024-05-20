@@ -1,4 +1,4 @@
-package com.example.medicalcheck;
+package com.example.medicalcheck.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.medicalcheck.R;
 
 public class AnotherActivity extends AppCompatActivity {
     TextView mTitleTv,mDescTv;

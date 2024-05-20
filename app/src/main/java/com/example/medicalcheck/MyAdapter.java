@@ -9,18 +9,15 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.medicalcheck.Workout;
+import com.example.medicalcheck.activities.AnotherActivity;
+import com.example.medicalcheck.data.Workout;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -63,7 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
 
 
 
-                Intent intent=new Intent(context,AnotherActivity.class);
+                Intent intent=new Intent(context, AnotherActivity.class);
                 intent.putExtra("Title", gTitle );
                 intent.putExtra("iImage",bytes );
                 intent.putExtra("Description", gDesc);
