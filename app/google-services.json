@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "139642367853",
+    "firebase_url": "https://medicalcheck-fee2f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "medicalcheck-fee2f",
+    "storage_bucket": "medicalcheck-fee2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139642367853:android:c05193c567fd9732823464",
+        "android_client_info": {
+          "package_name": "com.example.medicalcheck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmLGg9jIiU8If86-hsrAUvzv5k6RjATbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
