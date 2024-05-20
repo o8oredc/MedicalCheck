@@ -95,7 +95,7 @@ public class Signup extends AppCompatActivity {
                             });
 
 
-                            CreateUserinDataBase(username,email);
+                            CreateUserinDataBase(email,username);
 
                         }else{
                             Toast.makeText(Signup.this, "Error !"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();

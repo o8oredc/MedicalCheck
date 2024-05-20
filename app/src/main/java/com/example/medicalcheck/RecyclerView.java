@@ -38,8 +38,8 @@ public class RecyclerView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_activity);
 
-        mRecyclerView = (androidx.recyclerview.widget.RecyclerView) findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(RecyclerView.this));
         list = new ArrayList<>();
 
 
@@ -51,8 +51,8 @@ public class RecyclerView extends AppCompatActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for(DocumentSnapshot dataSnapshot: queryDocumentSnapshots.getDocuments()){
-                    Workout w = dataSnapshot.toObject(Workout.class);
-                    list.add(w);
+                    Workout workout = dataSnapshot.toObject(Workout.class);
+                    list.add(workout);
                 }
 
                 myAdapter = new MyAdapter(RecyclerView.this, list);

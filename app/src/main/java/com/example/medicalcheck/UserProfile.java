@@ -2,8 +2,8 @@ package com.example.medicalcheck;
 
 public class UserProfile {
 
-    String username;
-    String photo;
+    private String username;
+    private String photo;
 
     public UserProfile(String username, String photo) {
         this.username = username;

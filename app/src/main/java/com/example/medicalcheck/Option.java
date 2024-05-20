@@ -5,10 +5,13 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,11 +21,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Option extends AppCompatActivity {
-    private Button StepCounter,Workout,Details,BmiActivity,LogOut;
+    private Button StepCounter,Workout,Details,BmiActivity,LogOut, profile;
+    ConstraintLayout linearmain;
     private FirebaseAuth mAuth;
     private Button Verify;
     private TextView VerifyMessage;
     private String userID;
+    String from;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,8 @@ public class Option extends AppCompatActivity {
 
         StepCounter=findViewById(R.id.StepCounterO);
         Workout=findViewById(R.id.WorkoutO);
+        profile=findViewById(R.id.ProfileFragment);
+        linearmain = findViewById(R.id.linearmain); linearmain.setVisibility(View.VISIBLE);
         /*Details=findViewById(R.id.Details);*/
         BmiActivity=findViewById(R.id.BmiActivity);
         LogOut=findViewById(R.id.Logout);
@@ -83,6 +90,19 @@ public class Option extends AppCompatActivity {
             }
         });
 
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                from = "profile";
+                linearmain.setVisibility(View.GONE);
+
+                FragmentTransaction ft= getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.FrameLayoutMain, new ProfileFragment());
+                ft.commit();
+            }
+        });
+
         LogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +119,16 @@ public class Option extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(from.equals("profile")) {
+            Intent intent = new Intent(Option.this, Option.class);
+            startActivity(intent);
+        }else super.onBackPressed();
+
     }
 }
 
